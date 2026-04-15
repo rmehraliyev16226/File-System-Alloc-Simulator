@@ -1,0 +1,13 @@
+# Basic correctness workload
+MKDIR /docs
+CREATE /docs/report.txt
+OPEN /docs/report.txt
+WRITE 3 4
+READ 3 2
+CLOSE 3
+LINK_HARD /docs/report.txt /docs/report_hard.txt
+LINK_SOFT /docs/report.txt /docs/report_soft.txt
+DELETE /docs/report.txt
+OPEN /docs/report_hard.txt
+READ 4 2
+CLOSE 4
